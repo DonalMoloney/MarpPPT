@@ -1,0 +1,9 @@
+# Generated output — regenerate with make_charts.py + npx marp
+demo/figures/
+demo/data/revenue.xlsx
+demo/slides.pptx
+demo/slides.html
+demo/slides.pdf
+
+# macOS
+.DS_Store

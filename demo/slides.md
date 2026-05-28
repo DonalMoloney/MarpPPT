@@ -5,7 +5,13 @@ paginate: true
 size: 16:9
 ---
 
-![bg](assets/stock/workspace-charts.png)
+<style>
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; }
+.columns img { width: 100%; }
+table { font-size: 0.85em; }
+</style>
+
+![bg right:30%](assets/stock/ferrari.png)
 
 # Build Presentations with Claude Code + Marp
 
@@ -17,8 +23,6 @@ The meta-point: writing the deck first helped organise the article.
 -->
 
 ---
-
-![bg right:40%](assets/stock/team-workshop.png)
 
 ## The Problem: Blank-Canvas Paralysis
 
@@ -140,13 +144,42 @@ figures/revenue-chart.png
 slide
 ```
 
-![width:680px](figures/revenue-chart.png)
-
 Ask Claude: *"Add a chart slide from data/revenue.csv."*
 
 <!--
 Re-run make_charts.py any time the data changes, then re-export.
 Claude adds the function, runs the script, and inserts the slide.
+-->
+
+---
+
+## Example — Data In, Chart Out
+
+<div class="columns">
+<div>
+
+**`data/revenue.csv`** — read in and formatted
+
+| Quarter | Revenue ($k) |
+| --- | ---: |
+| Q1 | 120 |
+| Q2 | 146 |
+| Q3 | 171 |
+| Q4 | 208 |
+
+*Full-year growth: **73%***
+
+</div>
+<div>
+
+![width:100%](figures/revenue-chart.png)
+
+</div>
+</div>
+
+<!--
+Same numbers, two views. The table proves the chart; the chart sells the story.
+Both are generated from one CSV — edit the data and re-run make_charts.py.
 -->
 
 ---
